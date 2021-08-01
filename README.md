@@ -7,7 +7,8 @@
 ## Testing
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
 * Use `useEvent` instead of `fireEvent`. Install `useEvent` [here](https://testing-library.com/docs/ecosystem-user-event/).
-* Prefer `testing-library` over `enzyme`
+* [Here](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) is how to fix the "not wrapped in act(...)" warning.
+* Prefer `testing-library` over `enzyme`.
 * Queries in `testing-library`:
     + `getBy...`: assert elements that are supposed to be present.
     + `queryBy...`: assert elements that are supposed NOT to be present.
