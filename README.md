@@ -6,3 +6,4 @@
 - Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
 ## Testing
 - [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
+- Use `useEvent` instead of `fireEvent`. Install `useEvent` [here](https://testing-library.com/docs/ecosystem-user-event/).
