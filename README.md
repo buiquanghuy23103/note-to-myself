@@ -1,6 +1,7 @@
 # Experiences and notes during my programming career
 ## React
 * Always set default value for state parameter of a reducer, otherwise, the state type will be "never" in app state (generated according to rootReducer)
+* Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks
 ## NodeJS
 * Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
 * Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
