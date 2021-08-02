@@ -14,3 +14,10 @@
     + `getBy...`: assert elements that are supposed to be present.
     + `queryBy...`: assert elements that are supposed NOT to be present.
     + `findBy...`: use `await findBy...` to assert elements that are async (elements that depend on network data, IO)
+* Get image by role `img` and alt text. For example:
+```javascript
+const toppingImages = screen.getByRole("img", {
+    // text match: "topping" should be the end of the alt text
+    name: /topping$/i,
+});
+```
