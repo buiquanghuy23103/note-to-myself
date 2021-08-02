@@ -13,4 +13,4 @@
 * Queries in `testing-library`:
     + `getBy...`: assert elements that are supposed to be present.
     + `queryBy...`: assert elements that are supposed NOT to be present.
-    + `findBy...`: assert elements that are async
+    + `findBy...`: use `await findBy...` to assert elements that are async (elements that depend on network data, IO)
