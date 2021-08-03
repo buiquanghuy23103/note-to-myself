@@ -24,3 +24,12 @@ const toppingImages = screen.getByRole("img", {
     name: /topping$/i,
 });
 ```
+* Get an alert by its role only. Don't find alerts by name.
+```javascript
+// This works
+const alert = await screen.findByRole("alert");
+// This doesn't work
+const alert = await screen.findByRole("alert", {
+    name: /an unexpected error/i
+});
+```
