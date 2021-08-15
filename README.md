@@ -1,7 +1,18 @@
 # Experiences and notes during my programming career
 ## Javascript
 * Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
-* Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning
+* Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
+* Here is how to update an object in an array by ID
+```javascript
+list.map(item => {
+        if (item.id === id) {
+            item.title = "new title";
+            item.author = "new author";
+        }
+        return item;
+    }
+)
+```
 ## React
 * Always set default value for state parameter of a reducer, otherwise, the state type will be "never" in app state (generated according to rootReducer)
 * Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks
