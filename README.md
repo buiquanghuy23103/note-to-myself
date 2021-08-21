@@ -19,7 +19,7 @@ list.map(item => {
 ## NodeJS
 * Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
 
-## Testing
+## React Testing
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
 * Use `useEvent` instead of `fireEvent`. Install `useEvent` [here](https://testing-library.com/docs/ecosystem-user-event/).
 * [Here](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) and [here](https://testing-library.com/docs/guide-disappearance/) is how to fix the "not wrapped in act(...)" warning.
@@ -43,4 +43,22 @@ const alert = await screen.findByRole("alert");
 const alert = await screen.findByRole("alert", {
     name: /an unexpected error/i
 });
+```
+## C programming
+* Given `int tab[10]`, `tab` is the pointer to the first element in the array. 
+* A string is a series of bytes. Each byte contains a character. The last byte must be a null character `\0`.
+* When creating a string MANUALLY, remember to put `\0` at the end.
+* With `cat -e` linux command, the `\0` character will be displayed as `@^`.
+* The following code will either not compile at all, or compile but crash. Declaring this way means that the memory area of the string (char array) is immutable
+```c
+char *str;
+
+str = "toto";
+str[0] = 'p';
+```
+* The following code will compile normally.
+```c
+char str[] = "toto";
+
+str[0] = 'p';
 ```
