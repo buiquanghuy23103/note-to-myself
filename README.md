@@ -45,6 +45,40 @@ const alert = await screen.findByRole("alert", {
 });
 ```
 ## C programming
+* When you pass `a` as a parameter to the function `fct`, function `fct` receives a **clone** of `a`. Turns out, `fct` only modify a clone of `a`, but not `a` itself. In other words, the following code will print `42`.
+```c
+#include <stdio.h>
+void    fct(int num)
+{
+        num = 3;
+}
+int     main(void)
+{
+        int a;
+        
+        a = 42;
+        fct(a);
+        printf("a = %d", a);
+        return (0);
+}
+```
+If you want to modify value of a variable inside a function, use pointer. In the following code, `fct` receives a clone of the address of `a`. Inside `fct`, we deference to the memory address of `a` and then modify the value inside that memory address. So in the end, we modify the value of `a`.
+```c
+#include <stdio.h>
+void    fct(int *ptr)
+{
+        *ptr = 3;
+}
+int     main(void)
+{
+        int a;
+        
+        a = 42;
+        fct(&a);
+        printf("a = %d", a);
+        return (0);
+}
+```
 * Given `int tab[10]`, `tab` is the pointer to the first element in the array. 
 * A string is a series of bytes. Each byte contains a character. The last byte must be a null character `\0`.
 * When creating a string MANUALLY, remember to put `\0` at the end.
