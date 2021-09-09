@@ -1,4 +1,8 @@
 # Experiences and notes during my programming career
+## Thinking
+* If you are stuck, rest.
+* Always hard code and brute force first. Never generalize too soon, never optimize too soon.
+* If you feel your solution is complicated, it means that your solution is wrong.
 ## Javascript
 * Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
