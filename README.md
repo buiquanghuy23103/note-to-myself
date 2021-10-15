@@ -49,7 +49,10 @@ const alert = await screen.findByRole("alert", {
 });
 ```
 ## C programming
-* Memory leak means that you lose the location of the allocated memory and you'll never able to free it anymore.
+### Memory leak
+* Memory leak means that you lose the location of the allocated memory and you'll never able to free it anymore. The best way to combat memory leaks is to make sure that you always free allocated memory at the end of the pointer's scope, for example the end of a function.
+* A dangling pointer is a pointer that points to a memory region that was previously deallocated. Unfortunately, having a pointer that points to a now freed memory region will surely cause problems, if used. To avoid problems from dangling pointer, check every single pointer in your program against NULL.
+### Pointers
 * You can assign any address to void pointer `void *ptr`. However, you cannot dereference a void pointer.
 * When you pass `a` as a parameter to the function `fct`, function `fct` receives a **clone** of `a`. Turns out, `fct` only modify a clone of `a`, but not `a` itself. In other words, the following code will print `42`.
 ```c
