@@ -49,6 +49,7 @@ const alert = await screen.findByRole("alert", {
 });
 ```
 ## C programming
+* Memory leak means that you lose the location of the allocated memory and you'll never able to free it anymore.
 * You can assign any address to void pointer `void *ptr`. However, you cannot dereference a void pointer.
 * When you pass `a` as a parameter to the function `fct`, function `fct` receives a **clone** of `a`. Turns out, `fct` only modify a clone of `a`, but not `a` itself. In other words, the following code will print `42`.
 ```c
