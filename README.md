@@ -10,35 +10,22 @@
 ## Javascript
 
 * At least, learn Javascript properly in [here](https://www.javascript.express).
-* When possible, use pure javascript instead of libraries: you understand the code 100% => easy to fix bug and make improvements.
+* Use `Array.concat()` rather than `Array.push()`, because `Array.concat()` does not add the item to the array, but creates a new array in which the content of the old array and the new item are both included.
 * Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
-* Here is how to update an object in an array by ID
-```javascript
-list.map(item => {
-        if (item.id === id) {
-            item.title = "new title";
-            item.author = "new author";
-        }
-        return item;
-    }
-)
-```
+
 ## React
 * Always set default value for state parameter of a reducer, otherwise, the state type will be "never" in app state (generated according to rootReducer)
-* Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks
+* Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks.
+
 ## NodeJS
 * Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
 
-## React Testing
+## React Unit Testing
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
 * Use `useEvent` instead of `fireEvent`. Install `useEvent` [here](https://testing-library.com/docs/ecosystem-user-event/).
 * [Here](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) and [here](https://testing-library.com/docs/guide-disappearance/) is how to fix the "not wrapped in act(...)" warning.
 * Prefer `testing-library` over `enzyme`.
-* Queries in `testing-library`:
-    + `getBy...`: assert elements that are supposed to be present.
-    + `queryBy...`: assert elements that are supposed NOT to be present.
-    + `findBy...`: use `await findBy...` to assert elements that are async (elements that depend on network data, IO)
 * Get image by role `img` and alt text. For example:
 ```javascript
 const toppingImages = screen.getByRole("img", {
