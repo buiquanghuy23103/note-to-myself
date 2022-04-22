@@ -9,7 +9,7 @@
 
 ## Javascript
 
-* At least, learn Javascript properly. Read the following material from left to right: [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
+* At least, learn Javascript properly. Read the following material from left to right: [Javascript Express](https://www.javascript.express), [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 * Use `Array.concat()` rather than `Array.push()`, because `Array.concat()` does not add the item to the array, but creates a new array in which the content of the old array and the new item are both included.
 * Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
