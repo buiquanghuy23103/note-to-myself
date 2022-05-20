@@ -51,6 +51,10 @@ const deleteNoteById = id => {
 
 * Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
 
+* Use [bcrypt](https://github.com/kelektiv/node.bcrypt.js) to generate password hashes.
+
+* Use [express-async-error](https://github.com/davidbanham/express-async-errors) to eliminate try/catch blocks. Because of the library, we do not need the next(exception) call anymore. The library handles everything under the hood. If an exception occurs in an async route, the execution is automatically passed to the error handling middleware.
+
 ## React Unit Testing
 
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
