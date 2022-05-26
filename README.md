@@ -18,6 +18,12 @@
 
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
 
+## Cypress
+
+* Cypress has adopted Mocha's bdd syntax.
+
+* Passing arrow functions to Mocha and Cypress is [discouraged](https://mochajs.org/#arrow-functions).
+
 ## React
 
 * Always set default value for state parameter of a reducer, otherwise, the state type will be "never" in app state (generated according to rootReducer)
