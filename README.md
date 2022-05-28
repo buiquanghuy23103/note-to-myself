@@ -30,7 +30,7 @@
 
 * Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks.
 
-### Don't mutate state, replace it
+### Don't mutate state
 
 * Use `Array.concat()` to add an item to an array rather than `Array.push()`, because `Array.concat()` does not mutate the array, but creates a new array in which the content of the old array and the new item are both included.
 
@@ -52,19 +52,27 @@ const deleteNoteById = id => {
     setNotes(notes.filter(n => n.id !== id))
 }
 ```
-
-## NodeJS
-
-* Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
-
-* Use [bcrypt](https://github.com/kelektiv/node.bcrypt.js) to generate password hashes.
-
-* Use [express-async-error](https://github.com/davidbanham/express-async-errors) to eliminate try/catch blocks. Because of the library, we do not need the next(exception) call anymore. The library handles everything under the hood. If an exception occurs in an async route, the execution is automatically passed to the error handling middleware.
-
-## React Unit Testing
+## Unit Testing
 
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
+* Use [deep-freeze](https://github.com/substack/deep-freeze) to ensure that the reducer doesn't change state internally.
+```javascript
+const state = []
+const action = {
+  type: 'NEW_NOTE',
+  data: {
+    content: 'the app state is in redux store',
+    important: true,
+    id: 1
+  }
+}
 
+deepFreeze(state)
+const newState = noteReducer(state, action)
+
+expect(newState).toHaveLength(1)
+expect(newState).toContainEqual(action.data)
+```
 * Use `useEvent` instead of `fireEvent`. Install `useEvent` [here](https://testing-library.com/docs/ecosystem-user-event/).
 
 * [Here](https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning) and [here](https://testing-library.com/docs/guide-disappearance/) is how to fix the "not wrapped in act(...)" warning.
@@ -87,6 +95,14 @@ const alert = await screen.findByRole("alert", {
     name: /an unexpected error/i
 });
 ```
+## NodeJS
+
+* Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
+
+* Use [bcrypt](https://github.com/kelektiv/node.bcrypt.js) to generate password hashes.
+
+* Use [express-async-error](https://github.com/davidbanham/express-async-errors) to eliminate try/catch blocks. Because of the library, we do not need the next(exception) call anymore. The library handles everything under the hood. If an exception occurs in an async route, the execution is automatically passed to the error handling middleware.
+
 ## C programming
 ### Memory leak
 * Memory leak means that you lose the location of the allocated memory and you'll never able to free it anymore. The best way to combat memory leaks is to make sure that you always free allocated memory at the end of the pointer's scope, for example the end of a function.
