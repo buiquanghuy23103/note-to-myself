@@ -52,7 +52,7 @@ const deleteNoteById = id => {
     setNotes(notes.filter(n => n.id !== id))
 }
 ```
-## Unit Testing
+### Unit Testing
 
 * [How to Write Unit Tests for Asynchronous Redux Thunk](https://decembersoft.com/posts/how-to-unit-test-redux-thunks/)
 * Use [deep-freeze](https://github.com/substack/deep-freeze) to ensure that the reducer doesn't change state internally.
