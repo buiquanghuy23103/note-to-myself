@@ -10,6 +10,19 @@
 
 * Whenever you want to manipulate (find, judge, extract, edit) patterns in a string, use [regex](https://github.com/ziishaned/learn-regex). Test your regex using this [tool](https://regex101.com/r/dmRygT/1).
 
+## Troubleshoot
+
+### Search error message
+
+* Search for the error message in Google and Stack Overflow, it's likely you're not the first person to ever run into this
+* Isolate the code that's throwing the error (next section). This should narrow down the possible sources of the error, and provide you with more information to search the internet for others who have had the same problem.
+
+### Isolate the code that's throwing the error
+
+* Revert back to a working version of your code
+* Apply your recent changes piece by piece, until it breaks
+* If your app is too large and complex to do that, try and extract the functionality you're trying to add to its own blank project, and go from there.
+
 ## Javascript
 
 * At least, learn Javascript properly. Read the following material from left to right: [Javascript Express](https://www.javascript.express), [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
