@@ -95,6 +95,42 @@ const alert = await screen.findByRole("alert", {
     name: /an unexpected error/i
 });
 ```
+
+### Hooks
+
+Below are some usefull custom hooks:
+
+* `useField` hook simplifies input management. Use spread syntax and `getInput` method to pass properties to `<input/>`. The `getInput` method extracts `reset` property from returned object of `userField`. Without `getInput` method, a warning is thrown: `Invalid value for prop 'reset' on  <input/> tag`
+
+```javascript
+const useField = (name, type) => {
+        const [value, setValue] = useState('')
+
+        const onChange = (event) => {
+                setValue(event.target.value)
+        }
+
+        const reset = () => setValue('')
+
+        return {
+                name,
+                value,
+                onChange,
+                type,
+                reset
+        }
+}
+const getInput = ({reset, ...input}) => input
+
+<form onSubmit={handleSubmit}>
+  <div>
+    content
+    <input { ...getInput(content) } />
+  </div>
+  <button type='submit'>create</button>
+</form>
+```
+
 ## NodeJS
 
 * Use [express-generator-typescript](https://www.npmjs.com/package/express-generator-typescript) to generate a basic NodeJS template with TypeScript.
