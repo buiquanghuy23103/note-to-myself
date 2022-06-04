@@ -3,12 +3,17 @@
 ## Thinking
 
 * If you are stuck, rest.
-
+* Losing your sanity is almost guaranteed if you leave the application in a completely broken state.
 * Always hard code and brute force first. Never generalize too soon, never optimize too soon.
 
 * If you feel your solution is complicated, it means that your solution is wrong.
 
 * Whenever you want to manipulate (find, judge, extract, edit) patterns in a string, use [regex](https://github.com/ziishaned/learn-regex). Test your regex using this [tool](https://regex101.com/r/dmRygT/1).
+
+## Refactor
+
+* Refactoring of existing code is a common reality of extending existing applications. Refactoring is an important and necessary skill even if it may feel difficult and unpleasant at times.
+* Always take baby steps. A baby step is a small change that doesn't break app functionality.
 
 ## Troubleshoot
 
