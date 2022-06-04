@@ -42,6 +42,7 @@
 * Always set default value for state parameter of a reducer, otherwise, the state type will be "never" in app state (generated according to rootReducer)
 
 * Follow [this article](https://www.robinwieruch.de/react-hooks-fetch-data) to optimize data fetching with `useEffect` hooks.
+* The `npm audit` command can be used to check the security of dependencies. It compares the version numbers of the dependencies in your application to a list of the version numbers of dependencies containing known security threats in a centralized error database.
 
 ### Don't mutate state
 
