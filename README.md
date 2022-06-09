@@ -130,21 +130,19 @@ const useField = (name, type) => {
         }
 
         const reset = () => setValue('')
-
-        return {
-                name,
-                value,
-                onChange,
-                type,
-                reset
+        
+        const inputProps = {
+          name, value, type, onChange
         }
-}
-const getInput = ({reset, ...input}) => input
 
+        return { name, value, onChange, type, reset, inputProps }
+}
+
+const content = useField('content', 'text')
 <form onSubmit={handleSubmit}>
   <div>
     content
-    <input { ...getInput(content) } />
+    <input { ...content.inputProps } />
   </div>
   <button type='submit'>create</button>
 </form>
