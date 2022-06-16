@@ -36,6 +36,12 @@
 
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
 
+## Typescript
+
+* Usually, types for existing packages can be found from the @types organization within npm, and you can add the relevant types to your project by installing an npm package with the name of your package with a @types/ prefix. For example: `npm install --save-dev @types/react`.
+
+* Since the typings are only used before compilation, the typings are not needed in the production build and they should always be in the devDependencies of the package.json.
+
 ## Cypress
 
 * Cypress has adopted Mocha's bdd syntax.
