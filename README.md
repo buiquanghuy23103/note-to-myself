@@ -44,6 +44,12 @@
 
 * The configuration rule `noImplicitAny` on compiler level should be on at all times.
 
+* Install ESLint and its TypeScript extention
+
+```
+npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
 ## Cypress
 
 * Cypress has adopted Mocha's bdd syntax.
