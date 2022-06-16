@@ -42,6 +42,8 @@
 
 * Since the typings are only used before compilation, the typings are not needed in the production build and they should always be in the devDependencies of the package.json.
 
+* The configuration rule `noImplicitAny` on compiler level should be on at all times.
+
 ## Cypress
 
 * Cypress has adopted Mocha's bdd syntax.
