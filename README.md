@@ -32,7 +32,9 @@
 
 * At least, learn Javascript properly. Read the following material from left to right: [Javascript Express](https://www.javascript.express), [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript), [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 
-* Use [lodash](https://lodash.com/docs/4.17.15) to manipulate arrays and collections
+* Use [lodash](https://lodash.com) to manipulate arrays and collections
+
+* In order to avoid time-eating bugs, it is recommended that within a flat directory, each file has a unique filename regardless of its extension. For example, if there is a `myFile.ts`, there should not be a `myFile.json`.
 
 * Spread operator cannot fully copy nested arrays or nested objects. Follow this [instruction](https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript) for deep cloning.
 
