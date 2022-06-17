@@ -38,11 +38,25 @@
 
 ## Typescript
 
-* Usually, types for existing packages can be found from the @types organization within npm, and you can add the relevant types to your project by installing an npm package with the name of your package with a @types/ prefix. For example: `npm install --save-dev @types/react`.
+* Usually, types for existing packages can be found from the @types organization within npm, and you can add the relevant types to your project by installing an npm package with the name of your package with a @types/prefix. For example: `npm install --save-dev @types/react`. Since the typings are only used before compilation, the typings are not needed in the production build and they should always be in the `devDependencies` of the `package.json`.
 
-* Since the typings are only used before compilation, the typings are not needed in the production build and they should always be in the devDependencies of the package.json.
+* Below is recommended TSConfig. More details can be found on [Intro to TSConfig Reference](https://www.staging-typescript.org/tsconfig#strict)
 
-* The configuration rule `noImplicitAny` on compiler level should be on at all times.
+```
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "outDir": "./build/",
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true
+  }
+}
+```
 
 * Install ESLint and its TypeScript extention
 
