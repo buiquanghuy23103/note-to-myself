@@ -15,6 +15,15 @@
 * Refactoring of existing code is a common reality of extending existing applications. Refactoring is an important and necessary skill even if it may feel difficult and unpleasant at times.
 * Always take baby steps. A baby step is a small change that doesn't break app functionality.
 
+## Working with an existing codebase
+
+* You can start your research by reading the README.md in the root of the repository. Usually, the README contains a brief description of the application and the requirements for using it, as well as how to start it for development.
+* Take a peek at `package.json`.
+* Start the application and click around to verify you have a functional development environment.
+* If the project has unit, integration or end-to-end tests, reading those is most likely beneficial.
+* You can also browse the folder structure to get some insight into the application's functionality and/or the architecture used. These are not always clear, and the developers might have chosen a way to organize code that is not familiar to you.
+* Do remember that reading code is a skill in itself, and don't worry if you don't understand the code on your first readthrough.
+
 ## Troubleshoot
 
 ### Search error message
