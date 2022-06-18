@@ -78,6 +78,8 @@ npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslin
 ```
 * We should never use type assertion unless there is no other way to proceed, as there is always the danger we assert an unfit type to an object and cause a nasty runtime error.
 
+* Passing a type parameter to Axios will not validate any data. It is quite dangerous especially if you are using external APIs. You can create custom validation functions which take in the whole payload and return the correct type, or you can use a type guard.
+
 ## Cypress
 
 * Cypress has adopted Mocha's bdd syntax.
