@@ -80,7 +80,7 @@ npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslin
 
 * Passing a type parameter to Axios will not validate any data. It is quite dangerous especially if you are using external APIs. You can create custom validation functions which take in the whole payload and return the correct type, or you can use a type guard.
 
-* At the moment of writing, `Omit` does not work well with union type. For example, let say `Entry` is a union type of `LowEntry`, `HighEntry` and `ImportantEntry`. We want to remove `id` from `Entry` by using `Omit<Entry, 'id'>`, but it would not work as expected. In fact, `Omit<Entry, 'id'>` only contains properties that are shared among the union members.
+* At the moment of writing, `Omit` does not work well with union type. For example, let say `Entry` is a union type of `LowEntry`, `HighEntry` and `ImportantEntry`. We want to remove `id` from `Entry` by using `Omit<Entry, 'id'>`, but it would not work as expected. In fact, `Omit<Entry, 'id'>` only contains properties that are shared among the union members. More details about this bug [here](https://github.com/microsoft/TypeScript/issues/42680).
 
 ## Cypress
 
