@@ -82,6 +82,8 @@ npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslin
 
 * At the moment of writing, `Omit` does not work well with union type. For example, let say `Entry` is a union type of `LowEntry`, `HighEntry` and `ImportantEntry`. We want to remove `id` from `Entry` by using `Omit<Entry, 'id'>`, but it would not work as expected. In fact, `Omit<Entry, 'id'>` only contains properties that are shared among the union members. More details about this bug [here](https://github.com/microsoft/TypeScript/issues/42680).
 
+* Follow this [blog](https://kentcdodds.com/blog/get-a-catch-block-error-message-with-typescript) to get a catch block error message.
+
 ## Cypress
 
 * Cypress has adopted Mocha's bdd syntax.
