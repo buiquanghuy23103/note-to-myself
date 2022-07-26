@@ -269,3 +269,18 @@ str[0] = 'p';
 * If an item is out of the viewport upon scrolling, any state inside that item will be lost. Use `rememberSavable` to remember the state.
 * The `remember` function works only as long as the composable is kept in the Composition. When you rotate, the whole activity is restarted so all state is lost. This also happens with any configuration change and on process death.
 * `LazyColumn` doesn't recycle its children like `RecyclerView`. It emits new Composables as you scroll through it and is still performant, as emitting Composables is relatively cheap compared to instantiating Android Views.
+* Always use `Column()` or `Row()` to wrap around `Icon()` for larger clickable area
+```
+Column(
+    modifier = Modifier
+        .align(Alignment.CenterVertically)
+        .clickable {
+            handleClickEvent()
+        }
+) {
+    Icon(
+        imageVector = Icons.Filled.MoreVert,
+        contentDescription = "Filter Icon"
+    )
+}
+```
